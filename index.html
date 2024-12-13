@@ -12,6 +12,21 @@
     </header>
     <main>
       <canvas id="gameCanvas"></canvas>
+      <div id="gameStartDiv" class="gameUI">
+        <h1>Apple Catcher</h1>
+        <p>Youe have 30 seconds to catc apples!</p>
+        <p>If you catch more than 10 apples, you win.</p>
+        <p>I fyou catch less than 10 apples, you lose</p>
+        <p>Click the start button to begin</p>
+        <button id="gameStartBtn"><p>Start</p></button>
+      </div>
+      <div id="gameEndDiv" class="gameUI">
+        <p id="gameOver"></p>
+        <h1>You <span id="gameWinLoseSpan"></span></h1>
+        <h1>Final Score: <span id="gameEndScoreSpan"></span></h1>
+        <p>Refresh the page to play again</p>
+      </div>
+
     </main>
     <footer>
       <p>Created by Thadar 2024</p>

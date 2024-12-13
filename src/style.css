@@ -14,7 +14,6 @@
 
 html,body{
   height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
 }
@@ -24,7 +23,8 @@ body{
   color: var(--liClr);
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  width: 100%;
+  flex: 1;
 }
 
 header,footer{
@@ -37,14 +37,59 @@ header,footer{
 main{
   flex: 1;
   display: flex;
+  width: 100%;
 }
 
 #gameCanvas{
-  border: 1px solid red;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
   display: flex;
   z-index: 1;
+}
+
+.gameUI{
+  width: 100%;
+  height: 100%;
+  background-color: var(--accClr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.gameUI *{
+  text-align: center;
+  margin-top: 5px;
+}
+
+#gameStartDiv{
+  display: flex;
+}
+
+#gameEndDiv{
+  display: none;
+}
+
+#gameStartBtn{
+  display: inline-block;
+  width: 100px;
+  padding: 8px 15px;
+  margin: 20px 0;
+  text-align: center;
+  font-family: inherit;
+  border-radius: 10px;
+}
+
+ #gameStartBtn p{
+  margin-top: 0;
+ }
+
+#gameStartBtn:hover{
+  background-color: var(--drClr);
+  border: 0.5px solid var(--liClr);
+  color: var(--liClr);
+  cursor: pointer;
 }
